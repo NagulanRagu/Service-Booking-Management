@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "a8ca8416-f321-4a79-9814-18777933d74b",
+		"name": "User Management",
+		"description": "REST Endpoints\n1.\tPOST : /user/ - Create User\nInput: JSON of AppUser class\nOutput : JSON of status, msg, payload. \n\n\n2.\tPUT: /user/ - Update User\nInput: JSON of AppUser class with necessary fields\nOutput: JSON of class with properties status, msg, payload\n\n3.\tGET : /user/ - Get all users\nOutput: JSON of class with properties status, msg and payload. Where payload is List of AppUser class\n\n4.\tGET: /user/{id} - Get All user details for specific id\nInput : Path Variable id\nOutput: JSON of class with properties status, msg and payload. Where payload is List of AppUser class\n\n5.\tPOST :/user/login - Login \nInput : JSON of class with properties userName and password\nOutput: JSON of class with properties status, msg, payload. Where payload is JWT access token",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Nagulan R U\",\r\n    \"password\" : \"1234\",\r\n    \"email\" : \"runagulan88@gmail.com\",\r\n    \"phoneNo\" : \"8870323658\",\r\n    \"registrationDate\" : \"02/12/2022\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/{1}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"{1}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"Nagulan R U\",\r\n    \"password\" : \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

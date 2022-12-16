@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../product-management-microservice"
+		},
+		{
+			"name": "service-booking-management-microservice",
+			"path": "../../../../service-booking-management-microservice"
+		},
+		{
+			"name": "authorization-microservice",
+			"path": "../../../../authorization-microservice"
+		}
+	],
+	"settings": {}
+}
